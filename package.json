@@ -45,7 +45,17 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "lint": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "typecheck": "npx tsc --noEmit",
+    "publish:npm": "npm publish --access public",
+    "prerelease": "git diff --exit-code && git diff --staged --exit-code",
+    "release": "npm run build && npm publish --access public && git push && git push --tags",
+    "version:patch": "npm version patch -m \"chore(release): %s\"",
+    "version:minor": "npm version minor -m \"chore(release): %s\"",
+    "version:major": "npm version major -m \"chore(release): %s\"",
+    "release:patch": "npm run version:patch && npm run release",
+    "release:minor": "npm run version:minor && npm run release",
+    "release:major": "npm run version:major && npm run release"
   },
   "dependencies": {
     "chalk": "^5.4.1",
