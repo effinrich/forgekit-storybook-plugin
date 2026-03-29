@@ -1,6 +1,6 @@
 {
   "name": "forgekit",
-  "version": "2.2.2",
+  "version": "2.2.0",
   "description": "Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis",
   "author": "Rich Tillman",
   "license": "MIT",
@@ -47,15 +47,10 @@
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build",
     "typecheck": "npx tsc --noEmit",
-    "publish:npm": "npm publish --access public",
-    "prerelease": "git diff --exit-code && git diff --staged --exit-code",
-    "release": "npm run build && npm publish --access public && git push && git push --tags",
-    "version:patch": "npm version patch -m \"chore(release): %s\"",
-    "version:minor": "npm version minor -m \"chore(release): %s\"",
-    "version:major": "npm version major -m \"chore(release): %s\"",
-    "release:patch": "npm run version:patch && npm run release",
-    "release:minor": "npm run version:minor && npm run release",
-    "release:major": "npm run version:major && npm run release"
+    "release": "commit-and-tag-version",
+    "release:minor": "commit-and-tag-version --release-as minor",
+    "release:major": "commit-and-tag-version --release-as major",
+    "postrelease": "git push --follow-tags origin main && npm publish --access public"
   },
   "dependencies": {
     "chalk": "^5.4.1",
@@ -66,6 +61,7 @@
   "devDependencies": {
     "@types/node": "^22.13.0",
     "@types/yargs": "^17.0.33",
+    "commit-and-tag-version": "^12.7.1",
     "tsup": "^8.4.0",
     "typescript": "^5.7.3",
     "vitest": "^3.0.0"
