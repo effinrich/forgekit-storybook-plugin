@@ -1,0 +1,75 @@
+{
+  "name": "forgekit",
+  "version": "1.0.0-beta.1",
+  "description": "Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis",
+  "author": "Rich Tillman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/effinrich/forgekit"
+  },
+  "keywords": [
+    "storybook",
+    "react",
+    "testing",
+    "code-generation",
+    "interaction-tests",
+    "playwright",
+    "accessibility",
+    "a11y",
+    "story-generation"
+  ],
+  "bin": {
+    "forgekit": "./bin/forgekit.js"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "bin"
+  ],
+  "engines": {
+    "node": ">=18.17.1"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "chokidar": "^4.0.3",
+    "fast-glob": "^3.3.3",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@types/yargs": "^17.0.33",
+    "tsup": "^8.4.0",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.0"
+  },
+  "peerDependencies": {
+    "storybook": ">=8.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "storybook": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  }
+}
