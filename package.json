@@ -1,6 +1,6 @@
 {
   "name": "forgekit",
-  "version": "2.2.1",
+  "version": "2.2.2",
   "description": "Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis",
   "author": "Rich Tillman",
   "license": "MIT",
