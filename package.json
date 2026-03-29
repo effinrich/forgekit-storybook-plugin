@@ -1,12 +1,12 @@
 {
-  "name": "@effinrich/forgekit-nx-storybook",
+  "name": "@effinrich/forgekit-storybook-plugin",
   "version": "1.0.0",
   "description": "Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis",
   "author": "Rich Tillman",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/effinrich/forgekit"
+    "url": "https://github.com/effinrich/forgekit-storybook-plugin"
   },
   "keywords": [
     "storybook",
@@ -20,7 +20,7 @@
     "story-generation"
   ],
   "bin": {
-    "forgekit": "./bin/forgekit.js"
+    "forgekit-storybook-plugin": "./bin/forgekit.js"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",

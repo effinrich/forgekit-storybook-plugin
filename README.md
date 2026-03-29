@@ -1,13 +1,13 @@
-# ForgeKit
+# ForgeKit Storybook Plugin
 
 Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis.
 
-ForgeKit analyzes your React components — props, callbacks, union types, features — and generates complete `.stories.tsx` files with controls, variants, interaction tests, and a11y audits. No configuration required.
+ForgeKit Storybook Plugin analyzes your React components — props, callbacks, union types, features — and generates complete `.stories.tsx` files with controls, variants, interaction tests, and a11y audits. No configuration required.
 
 ## Install
 
 ```bash
-npm install -D forgekit
+npm install -D @effinrich/forgekit-storybook-plugin
 ```
 
 **Peer dependencies** (optional):
@@ -15,31 +15,31 @@ npm install -D forgekit
 - `storybook >= 8.0.0`
 - `typescript >= 5.0.0`
 
-Run `npx forgekit init` to check prerequisites and see what's installed.
+Run `npx forgekit-storybook-plugin init` to check prerequisites and see what's installed.
 
 ## Quick Start
 
 ```bash
 # Generate a story for a single component
-npx forgekit story src/components/Button.tsx
+npx forgekit-storybook-plugin story src/components/Button.tsx
 
 # Generate stories for every component in a directory
-npx forgekit stories src/components/
+npx forgekit-storybook-plugin stories src/components/
 
 # Check coverage without generating anything
-npx forgekit coverage src/components/
+npx forgekit-storybook-plugin coverage src/components/
 ```
 
 ## CLI Commands
 
-### `forgekit story <path>`
+### `forgekit-storybook-plugin story <path>`
 
 Generate a Storybook story for a single React component.
 
 ```bash
-npx forgekit story src/Button.tsx
-npx forgekit story src/Button.tsx --dry-run
-npx forgekit story src/Button.tsx --overwrite --skip-interaction-tests
+npx forgekit-storybook-plugin story src/Button.tsx
+npx forgekit-storybook-plugin story src/Button.tsx --dry-run
+npx forgekit-storybook-plugin story src/Button.tsx --overwrite --skip-interaction-tests
 ```
 
 | Option | Default | Description |
@@ -49,13 +49,13 @@ npx forgekit story src/Button.tsx --overwrite --skip-interaction-tests
 | `--overwrite` | `false` | Overwrite existing story file |
 | `--dry-run` | `false` | Preview without writing files |
 
-### `forgekit stories <dir>`
+### `forgekit-storybook-plugin stories <dir>`
 
 Bulk generate stories for all components in a directory.
 
 ```bash
-npx forgekit stories src/components/
-npx forgekit stories src/components/ --include-tests --overwrite
+npx forgekit-storybook-plugin stories src/components/
+npx forgekit-storybook-plugin stories src/components/ --include-tests --overwrite
 ```
 
 | Option | Default | Description |
@@ -65,13 +65,13 @@ npx forgekit stories src/components/ --include-tests --overwrite
 | `--dry-run` | `false` | Preview without writing files |
 | `--include-tests` | `false` | Also generate Playwright component tests |
 
-### `forgekit test <path>`
+### `forgekit-storybook-plugin test <path>`
 
 Generate a Playwright component test for a React component.
 
 ```bash
-npx forgekit test src/Button.tsx
-npx forgekit test src/Button.tsx --dry-run
+npx forgekit-storybook-plugin test src/Button.tsx
+npx forgekit-storybook-plugin test src/Button.tsx --dry-run
 ```
 
 | Option | Default | Description |
@@ -79,13 +79,13 @@ npx forgekit test src/Button.tsx --dry-run
 | `--overwrite` | `false` | Overwrite existing test file |
 | `--dry-run` | `false` | Preview without writing files |
 
-### `forgekit watch <dir>`
+### `forgekit-storybook-plugin watch <dir>`
 
 Watch a directory and auto-generate stories when components change.
 
 ```bash
-npx forgekit watch src/components/
-npx forgekit watch src/components/ --debounce 500
+npx forgekit-storybook-plugin watch src/components/
+npx forgekit-storybook-plugin watch src/components/ --debounce 500
 ```
 
 | Option | Default | Description |
@@ -93,13 +93,13 @@ npx forgekit watch src/components/ --debounce 500
 | `--skip-interaction-tests` | `false` | Skip generating play functions |
 | `--debounce` | `300` | Debounce interval in milliseconds |
 
-### `forgekit coverage <dir>`
+### `forgekit-storybook-plugin coverage <dir>`
 
 Report story coverage for a directory without generating files.
 
 ```bash
-npx forgekit coverage src/components/
-npx forgekit coverage src/components/ --json
+npx forgekit-storybook-plugin coverage src/components/
+npx forgekit-storybook-plugin coverage src/components/ --json
 ```
 
 | Option | Default | Description |
@@ -108,13 +108,13 @@ npx forgekit coverage src/components/ --json
 
 Coverage grades: **A** (≥ 90%) · **B** (≥ 75%) · **C** (≥ 50%) · **D** (≥ 25%) · **F** (< 25%)
 
-### `forgekit init`
+### `forgekit-storybook-plugin init`
 
 Check prerequisites and display the setup guide.
 
 ## What Gets Generated
 
-For each component, ForgeKit can generate up to **9 Storybook stories**:
+For each component, ForgeKit Storybook Plugin can generate up to **9 Storybook stories**:
 
 | Story | Condition | Tests |
 | --- | --- | --- |
@@ -142,7 +142,7 @@ import {
   scoreCoverage,
   scanDirectory,
   watchDirectory,
-} from 'forgekit';
+} from '@effinrich/forgekit-storybook-plugin';
 ```
 
 ### `forgeStory(options)`
@@ -201,7 +201,7 @@ const report = scoreCoverage(8, 10);
 
 ## Component Analysis
 
-ForgeKit detects:
+ForgeKit Storybook Plugin detects:
 
 - **Props** — name, type, required, callbacks, union values (`'sm' | 'md' | 'lg'`)
 - **Features** — children, React Router, React Query, Chakra UI

@@ -1,15 +1,15 @@
-import yargs from 'yargs';
-import { hideBin } from 'yargs/helpers';
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
-import { storyCommand } from './commands/story';
-import { storiesCommand } from './commands/stories';
-import { testCommand } from './commands/test';
-import { watchCommand } from './commands/watch';
-import { coverageCommand } from './commands/coverage';
-import { initCommand } from './commands/init';
+import { storyCommand } from './commands/story'
+import { storiesCommand } from './commands/stories'
+import { testCommand } from './commands/test'
+import { watchCommand } from './commands/watch'
+import { coverageCommand } from './commands/coverage'
+import { initCommand } from './commands/init'
 
 yargs(hideBin(process.argv))
-  .scriptName('forgekit')
+  .scriptName('forgekit-storybook-plugin')
   .usage('$0 <command> [options]')
   .command(storyCommand)
   .command(storiesCommand)
@@ -21,4 +21,4 @@ yargs(hideBin(process.argv))
   .strict()
   .alias('h', 'help')
   .alias('v', 'version')
-  .parse();
+  .parse()

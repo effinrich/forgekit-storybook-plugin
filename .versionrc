@@ -39,6 +39,6 @@
       "hidden": true
     }
   ],
-  "commitUrlFormat": "https://github.com/effinrich/forgekit/commit/{{hash}}",
-  "compareUrlFormat": "https://github.com/effinrich/forgekit/compare/{{previousTag}}...{{currentTag}}"
+  "commitUrlFormat": "https://github.com/effinrich/forgekit-storybook-plugin/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/effinrich/forgekit-storybook-plugin/compare/{{previousTag}}...{{currentTag}}"
 }
