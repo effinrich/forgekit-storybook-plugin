@@ -1,5 +1,5 @@
 {
-  "name": "forgekit",
+  "name": "@effinrich/forgekit-nx-storybook",
   "version": "2.3.0",
   "description": "Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis",
   "author": "Rich Tillman",
