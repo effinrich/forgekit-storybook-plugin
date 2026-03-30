@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.1](https://github.com/effinrich/forgekit-storybook-plugin/compare/v2.1.0...v2.1.1) (2026-03-30)
+
+
+### Bug Fixes
+
+* update bin entry to match new plugin name and add SKILL documentation ([9693685](https://github.com/effinrich/forgekit-storybook-plugin/commit/9693685aa237bcbf35fcd038535e9f839e0c5a01))
+
 ## [2.1.0](https://github.com/effinrich/forgekit-storybook-plugin/compare/v2.0.3...v2.1.0) (2026-03-30)
 
 
