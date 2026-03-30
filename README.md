@@ -210,6 +210,29 @@ ForgeKit Storybook Plugin detects:
 
 Controls are auto-mapped: `text`, `number`, `boolean`, `select` (for unions), `action` (for callbacks).
 
+## Copilot / AI Agent Skill
+
+ForgeKit Storybook Plugin ships with a [Copilot skill](.agents/skills/forgekit-storybook-plugin/SKILL.md) so AI agents know when and how to invoke it. To install:
+
+**Project-level** (already included in this repo):
+```
+.agents/skills/forgekit-storybook-plugin/SKILL.md
+```
+Any Copilot session in this workspace will automatically pick it up.
+
+**Global** (available in all your projects):
+```bash
+mkdir -p ~/.agents/skills/forgekit-storybook-plugin
+cp .agents/skills/forgekit-storybook-plugin/SKILL.md ~/.agents/skills/forgekit-storybook-plugin/
+```
+
+**Via the skills registry:**
+```bash
+npx skills add effinrich/forgekit-storybook-plugin@forgekit-storybook-plugin
+```
+
+Once installed, you can say things like "generate stories for my components" or "check story coverage" in chat and the agent will run the right CLI commands.
+
 ## Requirements
 
 - Node.js ≥ 18.17.1

@@ -20,7 +20,7 @@
     "story-generation"
   ],
   "bin": {
-    "storyforge": "./bin/storyforge.js"
+    "forgekit-storybook-plugin": "./bin/forgekit.js"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
