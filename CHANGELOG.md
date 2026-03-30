@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.3](https://github.com/effinrich/forgekit-storybook-plugin/compare/v2.0.2...v2.0.3) (2026-03-30)
+
 ## [2.0.2](https://github.com/effinrich/storyforge/compare/v2.0.0...v2.0.2) (2026-03-30)
 
 ## [2.0.0](https://github.com/effinrich/storyforge/compare/v1.0.0...v2.0.0) (2026-03-29)
