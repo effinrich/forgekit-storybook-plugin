@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.1.0](https://github.com/effinrich/forgekit-storybook-plugin/compare/v2.0.3...v2.1.0) (2026-03-30)
+
+
+### Features
+
+* enhance story generation for React components ([346f64d](https://github.com/effinrich/forgekit-storybook-plugin/commit/346f64d7a2512cca1ece15315805af358b155de5))
+
+
+### Bug Fixes
+
+* update package name and repository URL to reflect new branding ([8af4fbe](https://github.com/effinrich/forgekit-storybook-plugin/commit/8af4fbe52d87eb3613d6317f3acd6e2b4ef98c55))
+
 ## [2.0.3](https://github.com/effinrich/forgekit-storybook-plugin/compare/v2.0.2...v2.0.3) (2026-03-30)
 
 ## [2.0.2](https://github.com/effinrich/storyforge/compare/v2.0.0...v2.0.2) (2026-03-30)
