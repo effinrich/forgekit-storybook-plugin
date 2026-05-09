@@ -1,5 +1,7 @@
 # ForgeKit Storybook Plugin
 
+> **Consolidation:** [`forgekit-storybook-mcp`](https://npmjs.com/package/forgekit-storybook-mcp) ([repo](https://github.com/effinrich/storybook-mcp)) is the actively developed MCP + CLI (`storybook-mcp` / `forgekit-storybook-mcp` bins) with overlapping generation features. Prefer that for greenfield setups; keep this plugin if you rely on **`forgekit-storybook-plugin`** commands today. Optional peer **`forgekit-storybook-mcp`** documents the pairing for npm installs.
+
 Auto-generate Storybook stories, interaction tests, Playwright component tests, and accessibility audits from React component analysis.
 
 ForgeKit Storybook Plugin analyzes your React components — props, callbacks, union types, features — and generates complete `.stories.tsx` files with controls, variants, interaction tests, and a11y audits. No configuration required.

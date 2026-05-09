@@ -67,10 +67,14 @@
     "vitest": "^3.0.0"
   },
   "peerDependencies": {
+    "forgekit-storybook-mcp": ">=1.2.0",
     "storybook": ">=8.0.0",
     "typescript": ">=5.0.0"
   },
   "peerDependenciesMeta": {
+    "forgekit-storybook-mcp": {
+      "optional": true
+    },
     "storybook": {
       "optional": true
     },
