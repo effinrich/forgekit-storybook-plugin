@@ -54,7 +54,7 @@
   },
   "dependencies": {
     "chalk": "^5.4.1",
-    "chokidar": "^4.0.3",
+    "chokidar": "^5.0.0",
     "fast-glob": "^3.3.3",
     "yargs": "^17.7.2"
   },
